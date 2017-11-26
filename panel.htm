@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Bitkisel Çözümler - Panel</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="panel.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    </head>
+    <body style="background-color: khaki; color:black;background-size: cover;">
+        <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="index.htm">Ana Sayfa</a>
+            <a href="hakkinda.htm">Hakkında</a>
+            <a href="iletisim.htm">İletişim</a>
+            <a href="#" id="urn">Ürünler</a>
+        </div>
+    
+        <h2 style="text-align: center; margin: 20px" >E - Ticaret Yazılım Çözümleri</h2>
+        <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Menü</span>
+        <div id="urunler" class="container" style="margin-top:150px;">
+            <div class="row">
+                <div class="col-md-4"  style="margin-left: 25%; margin-right: 25%;">
+                    <h1>Ürün Kayıt</h1>
+                    <label>Kodu/Barkodu</label>
+                    <input type="text" id="txtBarkod" class="form-control">
+                    <label>Açıklama</label>
+                    <input type="text" id="txtAciklama" class="form-control">
+                    <label>Fiyat</label>
+                    <input type="text" id="txtFiyat" class="form-control">
+                    <br>
+                    <button id="btnKaydet" class="center-block btn-success btn-lg btn-block">Kaydet</button>
+                    <hr>
+                    <div id="sonuc"></div>
+    
+                </div>
+                <div class="col-md-12">
+                    <h1>Kayıtlar</h1>
+                    <table class="table table-hover" id="tbKayitlar">
+                        <tr class="bg-info">
+    
+                            <td>Kodu/Barkodu</td>
+                            <td>Açıklama</td>
+                            <td>Fiyatı</td>
+                            <td>İşlem</td>
+                        </tr>
+                        <tr>
+    
+                            <td>802416569979</td>
+                            <td>Dogadan Adaçayı</td>
+                            <td>4,30 &#8378;</td>
+                            <td>
+                                <button class="btn btn-danger sil">Sil</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>849856569979</td>
+                            <td>Akzer Kekik Bitki Çayı</td>
+                            <td>9,87 &#8378;</td>
+                            <td>
+                                <button class="btn btn-danger sil">Sil</button>
+                            </td>
+                        </tr>
+                        <tr>
+                                <td>894428169979</td>
+                                <td>Lipton Bogurtlenlı Çay</td>
+                                <td>5,90 &#8378;</td>
+                                <td>
+                                    <button class="btn btn-danger sil">Sil</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                    <td>820327569979</td>
+                                    <td>Hekimhan Üzerlik Tohumu Karışık Bitki Çayı</td>
+                                    <td>14,90 &#8378;</td>
+                                    <td>
+                                        <button class="btn btn-danger sil">Sil</button>
+                                    </td>
+                                </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+        <script>
+             $(function(){
+ 
+               
+                    $("#urn").click(function(){
+    
+                    $("#urunler").toggle(500);
+ });
+});
+            $(function () {
+                $("#txtBarkod").keypress(function (event) {
+                   if (event.which < 48 || event.which > 57) {
+                     return false;
+                     }
+                     });
+                     $("#txtFiyat").keypress(function (event) {
+                   if (event.which < 48 || event.which > 57) {
+                     return false;
+                     }
+                     });
+                $("#btnKaydet").click(function () {
+                    var Barkodu= $("#txtBarkod").val();
+                    var Aciklama = $("#txtAciklama").val();
+                    var Fiyat = $("#txtFiyat").val();
+                    if (Barkodu == "" || Aciklama == "" || Fiyat == "") {
+                        $("#sonuc").fadeIn(1000);
+                        $("#giris").hide();
+                        $("#sonuc").html("Lütfen Tüm Alanları Doldurunuz!");
+                        $("#sonuc").removeClass();
+                        $("#sonuc").addClass("alert alert-danger");
+                        $("#sonuc").fadeOut(3000);
+                        return false;
+                    }
+                    $("#tbKayitlar").append("<tr><td>" + Barkodu + "</td><td>" + Aciklama + "</td><td>" + Fiyat + "</td><td><button class='btn btn-danger sil'>Sil</button></td></tr>");
+                });
+                 $("#btnKaydett").click(function () {
+                        $("#giris").show();
+    
+                });
+                $(document).on("click", ".sil", function () {
+                    var satir = $(this).closest("tr");
+                    satir.remove();
+                });
+            });
+        </script>
+    
+        <script>
+            function openNav() {
+                document.getElementById("mySidenav").style.width = "250px";
+            }
+
+            function closeNav() {
+                document.getElementById("mySidenav").style.width = "0";
+            }
+        </script>
+    
+    </body>
+    
+    </html>

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <title>Bitkisel Çözümler - İletişim</title>
+
+</head>
+
+<body>
+    <div class="container">
+        <nav class="navbar navbar-inverse">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false"
+                        aria-controls="navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">Bitkisel Çözümler</a>
+                </div>
+                <div id="navbar" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li>
+                            <a href="index.htm">Ana Sayfa</a>
+                        </li>
+                        <li>
+                            <a href="hakkinda.htm">Hakkında</a>
+                        </li>
+                        <li class="active">
+                            <a href="iletisim.htm">İletişim</a>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Ürünler
+                                <span class="caret"></span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="#">Pekmezler</a>
+                                </li>
+                                <li>
+                                    <a href="#">Bitkisel Macunlar</a>
+                                </li>
+                                <li>
+                                    <a href="#">Bitkisel Çaylar</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right navbar-inverse">
+                        <li>
+                            <a href="wp-giris.htm" class="glyphicon glyphicon-log-in"></a>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <div class="row">
+            <div class="col-md-12">
+                <div class="alert alert-warning">
+                    <span class="glyphicon glyphicon-info-sign">
+                        <p style="font-size: 30px; font-family:fantasy">Bitkisel Çözümler
+                        </div>
+        <div id="msj"></div>
+
+            </div>
+                <div class="container" style="margin-top: 100px;">
+                    <div class="col-md-4" style="margin-left: 25%; margin-right: 25%;">
+                        <h1 style="color:white;">İletişim</h1>
+                        <div class="form-group">
+                            <label style="color:white;">E - Mail</label>
+                            <input type="text" id="txtMail"  class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label style="color:white;">Adı</label>
+                            <input id="parola" id="txtAdi" type="text" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label style="color:white;">Konu</label>
+                            <textarea class="form-control" id="txtMesaj" rows="5"></textarea>
+                </div>
+                  
+                        <button id="gndr" type="button" class="center-block btn-info btn-lg btn-block" style="color:white;">Gönder</button>
+                
+                    </div>
+                </div>
+               
+            <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+                <script>
+                    $(function () {
+                       
+                        $("#gndr").click(function () {
+                            var adi = $("#txtAdi").val();
+                            var email = $("#txtMail").val();
+                            var mesaj = $("#txtMesaj").val();
+                            if (adi=="" || email=="" || mesaj=="") 
+                            {
+                                $("#msj").fadeIn(1000);
+                                $("#msj").html("Lütfen Tüm Alanları Doldurunuz!");
+                                $("#msj").removeClass();
+                                $("#msj").addClass("alert alert-danger");
+                                $("#msj").fadeOut(5000);
+                                return false;                        
+                            }
+                            else    
+                            {
+                                alert("Mesajınız Alındı!");
+                            }
+                        });
+
+                    });
+                   
+                   
+                </script>
+        </div>
+    </div>
+    </div>
+    </div>
+</body>
+
+</html>

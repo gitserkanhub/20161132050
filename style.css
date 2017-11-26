@@ -1,0 +1,32 @@
+body {
+	background-image:url("ap.jpg");	
+    padding-top: 30px;
+    padding-bottom: 20px;
+}
+table{
+	margin-top: 20px;
+	background-color: #fcfcfc;
+}
+.text-info{
+	padding: 4.5rem 0!important;
+}
+.text-money{
+    padding: 4.5rem 0!important;
+    font-weight: 600;
+    font-size: 2.2rem;
+}
+p.img-circle{
+    width: 100px;
+    height: 100px;
+    box-shadow: 3px 4px 3px #4e4e4e47;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+button.btn{
+	display: block;
+    text-align: center;
+	width: 120px;
+	margin-top: 15px;
+	margin-bottom: 15px;
+}

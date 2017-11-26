@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <title>Bitkisel Çözümler</title>
+</head>
+
+<body>
+  <div class="container">
+    <nav class="navbar navbar-inverse">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false"
+            aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Bitkisel Çözümler</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          
+          <ul class="nav navbar-nav">
+            <li class="active">
+              <a href="index.htm">Ana Sayfa</a>
+            </li>
+            <li>
+              <a href="hakkinda.htm">Hakkında</a>
+            </li>
+            <li>
+              <a href="iletisim.htm">İletişim</a>
+            </li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Ürünler
+                <span class="caret"></span>
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a href="#">Pekmezler</a>
+                </li>
+                <li>
+                  <a href="#">Bitkisel Macunlar</a>
+                </li>
+                <li>
+                  <a href="#">Bitkisel Çaylar</a>
+                </li>
+              </ul>
+            </li>    
+              
+          </ul>  
+          <ul class="nav navbar-nav navbar-right navbar-inverse">
+            <li>
+              <a href="wp-giris.htm" class="glyphicon glyphicon-log-in"></a>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="row">
+      <div class="col-md-12 table-responsive">
+
+        <table class="table table-hover" id="tblUrn" style="margin-top:20px;">
+          <tr class="bg-primary">
+            <td>Ürün Görseli</td>
+            <td>Açıklama</td>
+            <td>Fiyat</td>
+            <td>İşlem</td>
+          </tr>
+          <tr>
+            <td>
+              <p style="background-image:url('uzmPkmz.jpg')" class="left-block img-responsive img-circle">
+            </td>
+            <td class="text-info">Aksuvital Üzüm Pekmezi</td>
+            <td class="text-money">20 &#8378;</td>
+            <td>
+              <button class="btn btn-primary">Satın al</button>
+              <button type="button" class="btn btn-danger" data-toggle="modal" data-target=".myModal" data-text="Aksuvital Üzüm Pekmezi 20 Tl.">
+                <span class="glyphicon glyphicon-search"></span>
+                İncele
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <p style="background-image:url('kBPkmz.jpg')" class="left-block img-responsive img-circle" width="150px" height="150px">
+            </td>
+            <td class="text-info">Koska Keçi Boynuzu Pekmezi</td>
+            <td class="text-money">17 &#8378;</td>
+            <td>
+              <button class="btn btn-primary">Satın al</button>
+              <button type="button" class="btn btn-danger" data-toggle="modal" data-target=".myModal" data-text="Koska Keçi Boynuzu Pekmezi 17 Tl.">
+                <span class="glyphicon glyphicon-search"></span>
+                İncele
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <p style="background-image:url('dutPkmz.jpg')" alt="" class="left-block img-responsive img-circle" width="150px" height="150px">
+            </td>
+            <td class="text-info">Koska Dut Pekmezi</td>
+            <td class="text-money">19,50 &#8378;</td>
+            <td>
+              <button class="btn btn-primary">Satın al</button>
+              <button type="button" class="btn btn-danger" data-toggle="modal" data-target=".myModal" data-text="Koska Dut Pekmezi 18,50 Tl.">
+                <span class="glyphicon glyphicon-search"></span>
+                İncele
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <p style="background-image:url('harnupPkmz.jpg')" alt="" class="left-block img-responsive img-circle" width="150px" height="150px">
+            </td>
+            <td class="text-info">Akzer Keçi Boynuzu Harnup Pekmezi</td>
+            <td class="text-money">11,90 &#8378;</td>
+            <td>
+              <button class="btn btn-primary">Satın al</button>
+              <button type="button" class="btn btn-danger" data-toggle="modal" data-target=".myModal" data-text="Akzer Keçi Boynuzu Harnup Pekmezi 11,90 Tl.">
+                <span class="glyphicon glyphicon-search"></span>
+                İncele
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <p style="background-image:url('avakadolu.jpg')" alt="" class="left-block img-responsive img-circle" width="150px" height="150px">
+            </td>
+            <td class="text-info">Hekimhan Avakadolu Karışık Bitki Çayı</td>
+            <td class="text-money">14,90 &#8378;</td>
+            <td>
+              <button class="btn btn-primary">Satın al</button>
+              <button type="button" class="btn btn-danger" data-toggle="modal" data-target=".myModal" data-text="Hekimhan Avakadolu Karışık Bitki Çayı 14,90 Tl.">
+                <span class="glyphicon glyphicon-search"></span>
+                İncele
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <p style="background-image:url('üzerlik.jpg')" alt="" class="left-block img-responsive img-circle" width="150px" height="150px">
+            </td>
+            <td class="text-info">Hekimhan Üzerlik Tohumu Karışık Bitki Çayı</td>
+            <td class="text-money">14,90 &#8378;</td>
+            <td>
+              <button class="btn btn-primary">Satın al</button>
+              <button type="button" class="btn btn-danger" data-toggle="modal" data-target=".myModal" data-text="Hekimhan Üzerlik Tohumu Karışık Bitki Çayı 14,90 Tl.">
+                <span class="glyphicon glyphicon-search"></span>
+                İncele
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <p style="background-image:url('lipton.jpg')" alt="" class="left-block img-responsive img-circle" width="150px" height="150px">
+            </td>
+            <td class="text-info">Lipton Karışık Bitki ve Meyve Çayı</td>
+            <td class="text-money">24,89 &#8378;</td>
+            <td>
+              <button class="btn btn-primary">Satın al</button>
+              <button type="button" class="btn btn-danger" data-toggle="modal" data-target=".myModal" data-text="120'li Polar Şal Hediyeli (Yeşil Çay, Ihlamur, Kuşburnu) 24,89 Tl.">
+                <span class="glyphicon glyphicon-search"></span>
+                İncele
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <p style="background-image:url('lipton1.jpg')" alt="" class="left-block img-responsive img-circle" width="150px" height="150px">
+            </td>
+            <td class="text-info">Lipton Bogurtlenlı Çay</td>
+            <td class="text-money">5,90 &#8378;</td>
+            <td>
+              <button class="btn btn-primary">Satın al</button>
+              <button type="button" class="btn btn-danger" data-toggle="modal" data-target=".myModal" data-text="2 gr 20 'li Bardak Poşet Çay">
+                <span class="glyphicon glyphicon-search"></span>
+                İncele
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <p style="background-image:url('enginar.jpg')" alt="" class="left-block img-responsive img-circle" width="150px" height="150px">
+            </td>
+            <td class="text-info">Akzer Enginar Yapraklı Deve Dikeni Tohumu Çay</td>
+            <td class="text-money">21,00 &#8378;</td>
+            <td>
+              <button class="btn btn-primary">Satın al</button>
+              <button type="button" class="btn btn-danger" data-toggle="modal" data-target=".myModal" data-text="60 Poset 21,00 Tl.">
+                <span class="glyphicon glyphicon-search"></span>
+                İncele
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <p style="background-image:url('kekik.jpg')" alt="" class="left-block img-responsive img-circle" width="150px" height="150px">
+            </td>
+            <td class="text-info">Akzer Kekik Bitki Çayı</td>
+            <td class="text-money">9,87 &#8378;</td>
+            <td>
+              <button class="btn btn-primary">Satın al</button>
+              <button type="button" class="btn btn-danger" data-toggle="modal" data-target=".myModal" data-text="Akzer Kekik Bitki Çayı 9,87 Tl.">
+                <span class="glyphicon glyphicon-search"></span>
+                İncele
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <p style="background-image:url('adacay.jpg')" alt="" class="left-block img-responsive img-circle" width="150px" height="150px">
+            </td>
+            <td class="text-info">Dogadan Adaçayı</td>
+            <td class="text-money">4,30 &#8378;</td>
+            <td>
+              <button class="btn btn-primary">Satın al</button>
+              <button type="button" class="btn btn-danger" data-toggle="modal" data-target=".myModal" data-text="Dogadan Adaçayı 1,3 Gr X 20 Li kk">
+                <span class="glyphicon glyphicon-search"></span>
+                İncele
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <p style="background-image:url('elma.jpg')" alt="" class="left-block img-responsive img-circle" width="150px" height="150px">
+            </td>
+            <td class="text-info">Dogadan Elma</td>
+            <td class="text-money">4,60 &#8378;</td>
+            <td>
+              <button class="btn btn-primary">Satın al</button>
+              <button type="button" class="btn btn-danger" data-toggle="modal" data-target=".myModal" data-text="Dogadan Elma 2 Gr X 20 Li kk 4,60 Tl.">
+                <span class="glyphicon glyphicon-search"></span>
+                İncele
+              </button>
+            </td>
+          </tr>
+        </table>
+        <div id="urnSayfa"></div>
+      </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    $('button').click(function () {
+      $(".modal-body").html($(this).data("text"));
+    });
+  </script>
+  <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+ 
+  <script>
+    $(function () {
+      var toplamLi = $("#tblUrn tr").length;
+      var veriSay = 7;
+      var sayfaSayisi = toplamLi / veriSay;
+      if (sayfaSayisi > parseInt(sayfaSayisi)) {
+        sayfaSayisi++;
+      }
+      $("#tblUrn tr:gt(" + (veriSay - 1) + ")").hide();
+      for (var i = 1; i <= sayfaSayisi; i++) {
+        $("#urnSayfa").append("<a href='#'>" + i + "</a>");
+      }
+      $("#urnSayfa a").addClass("btn btn-success");
+      $("#urnSayfa a:first").removeClass();
+      $("#urnSayfa a:first").addClass("btn btn-danger");
+      $("#urnSayfa a").click(function () {
+        $("#tblUrn tr").hide();
+        var index = $(this).index();
+        $("#urnSayfa a").removeClass();
+        $("#urnSayfa a").addClass("btn btn-success");
+        $("#urnSayfa a:eq(" + index + ")").removeClass();
+        $("#urnSayfa a:eq(" + index + ")").addClass("btn btn-danger");
+        var syf = index + 1;
+        var s = veriSay * syf;
+        for (var i = s - veriSay; i < s; i++) {
+          $("#tblUrn tr:eq(" + i + ")").show();
+        }
+      });
+    });
+  </script>
+  <div class="modal fade myModal" role="dialog">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Ürün Detayı</h4>
+        </div>
+        <div class="modal-body">
+          <p>Some text in the modal.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Tamam</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</body>
+
+</html>
